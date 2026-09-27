@@ -40,7 +40,14 @@ make
 ## 対応環境
 
 [`exword-template`](https://github.com/brain-hackers/exword-template)の対象範囲に基づき、DATAPLUS 5 / 6 / 7を理論上の対象とします。
-EXQ12モデルの全体読み込みと構造検査はXD-N6500（DATAPLUS 7）で確認済みです。他の機種での動作は保証しません。
+EXQ12モデルの全体読み込みと構造検査は、次の実機で確認済みです。他の機種での動作は保証しません。
+
+| 機種 | 世代 | 結果 |
+| --- | --- | --- |
+| CASIO XD-B4800 | DATAPLUS 6 | 動作確認済み |
+| CASIO XD-N6500 | DATAPLUS 7 | 動作確認済み |
+
+両機種でEXLLM 5Mモデル（5,443,105 bytes、FNV-1a `A16CDCA6`）を検査し、39 tensors（INT8 26 / FP16 13）、payload 5,381,568 bytesとして同一の結果を確認しました。
 
 関連プロジェクト：
 
@@ -67,6 +74,13 @@ The checker does not load the complete model into the application heap and does 
 
 Build with `devkitSH4` and the upstream `libdataplus` dependency using the commands shown above. Artifacts are written to `build/ja/XQCHK/`.
 
-Based on the supported scope of [`exword-template`](https://github.com/brain-hackers/exword-template), DATAPLUS 5, 6, and 7 are theoretical targets. Full-file EXQ12 streaming and structural validation have been tested on an XD-N6500 (DATAPLUS 7). Other models are not guaranteed.
+Based on the supported scope of [`exword-template`](https://github.com/brain-hackers/exword-template), DATAPLUS 5, 6, and 7 are theoretical targets. Full-file EXQ12 streaming and structural validation have been tested on the following devices; other models are not guaranteed.
+
+| Device | Generation | Result |
+| --- | --- | --- |
+| CASIO XD-B4800 | DATAPLUS 6 | Tested |
+| CASIO XD-N6500 | DATAPLUS 7 | Tested |
+
+Both devices produced the same result for the EXLLM 5M model: 5,443,105 bytes, FNV-1a `A16CDCA6`, 39 tensors (26 INT8 / 13 FP16), and a 5,381,568-byte payload.
 
 Licensed under GPL-2.0. See [`COPYING`](COPYING) and [`THIRD_PARTY.md`](THIRD_PARTY.md).
