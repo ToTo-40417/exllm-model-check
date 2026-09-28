@@ -54,6 +54,8 @@ EXQ12モデルの全体読み込みと構造検査は、次の実機で確認済
 - [EXLLM model and training source](https://github.com/ToTo-40417/exllm)
 - [EXLLM runtime for EX-word](https://github.com/ToTo-40417/exllm-exword)
 - [EXLLM model on Hugging Face](https://huggingface.co/ToTo-40417/EXLLM)
+- [EX-word hardware dump](https://github.com/ToTo-40417/exword-hardware-dump)
+- [EX-word RAM scanner](https://github.com/ToTo-40417/exword-ram-scanner)
 
 ## License
 
